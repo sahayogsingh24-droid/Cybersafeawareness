@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSafe Awareness</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #003366);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.3em;
+      margin: 0;
+      text-shadow: 2px 2px 5px #000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #00ffff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .tip-card {
+      background: rgba(255,255,255,0.1);
+      border-left: 4px solid #00ffff;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .tip-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    button {
+      background: #00ffff;
+      color: #001f3f;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px 5px 15px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00bfbf;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CyberSafe: Stay Protected Online</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#tips">Tips</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>What is Cybersecurity Awareness?</h2>
+    <p>
+      Cybersecurity awareness helps you understand online threats and protect your personal information effectively.
+    </p>
+  </section>
+
+  <section id="tips">
+    <h2>Top Safety Tips</h2>
+    <div class="tip-card">
+      <h3>Strong Passwords</h3>
+      <p>
+        Use unique passwords for each account and update them regularly.
+      </p>
+    </div>
+    <div class="tip-card">
+      <h3>Two-Factor Authentication</h3>
+      <p>
+        Enable 2FA to add an extra layer of security to your accounts.
+      </p>
+    </div>
+    <div class="tip-card">
+      <h3>Think Before Clicking</h3>
+      <p>
+        Do not click on suspicious links or download unknown attachments.
+      </p>
+    </div>
+    <div class="tip-card">
+      <h3>Back Up Data</h3>
+      <p>
+        Regularly back up your important files to prevent data loss.
+      </p>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <h2>Quick Cybersecurity Quiz</h2>
+    <p>
+      Test your knowledge below:
+    </p>
+    <div class="quiz-question">
+      <p>
+        1. Is it safe to use the same password for multiple accounts?
+      </p>
+      <button onclick="checkAnswer(this, false)">Yes</button>
+      <button onclick="checkAnswer(this, true)">No</button>
+    </div>
+    <div class="quiz-question">
+      <p>
+        2. Should you enable two-factor authentication?
+      </p>
+      <button onclick="checkAnswer(this, true)">Yes</button>
+      <button onclick="checkAnswer(this, false)">No</button>
+    </div>
+    <div class="quiz-question">
+      <p>
+        3. Do you share personal information on social media?
+      </p>
+      <button onclick="checkAnswer(this, false)">Yes</button>
+      <button onclick="checkAnswer(this, true)">No</button>
+    </div>
+    <div class="quiz-question">
+      <p>
+        4. Should you trust any vpn app?
+      </p>
+      <button onclick="checkAnswer(this, false)">Yes</button>
+      <button onclick="checkAnswer(this, true)">No</button>
+    </div>
+    <div id="quiz-result"></div>
+  </section>
+
+  <section id="resources">
+    <h2>Learn More</h2>
+    <ul>
+      <li><a href="https://static.cybercrime.gov.in/Webform/CyberAware.aspx" target="_blank">Cyber Aware – Government of India</a></li>
+      <li><a href="https://isea.gov.in/digitalnaagrik/" target="_blank">Digital Naagrik – ISEA Awareness</a></li>
+      <li><a href="https://pledge.mygov.in/cyber-security-awareness/" target="_blank">MyGov Cyber Security Awareness</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      © 2025 CyberSafe Awareness
+    </p>
+  </footer>
+
+  <script>
+    function checkAnswer(button, isCorrect) {
+      const result = document.getElementById('quiz-result');
+      if (isCorrect) {
+        result.textContent = "Correct 👍✅";
+        result.style.color = "#10b981"; // Green for correct
+      } else {
+        result.textContent = "Incorrect 🙅❌";
+        result.style.color = "#ef4444"; // Red for incorrect
+      }
+    }
+  </script>
+</body>
+  </html>
